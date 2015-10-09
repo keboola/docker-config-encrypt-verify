@@ -13,7 +13,7 @@ if (!isset($arguments["data"])) {
 $config = Yaml::parse(file_get_contents($arguments["data"] . "/config.yml"));
 
 try {
-    if ($config["parameters"]["plain"] == $config["parameters"]["encrypted"]) {
+    if ($config["parameters"]["plain"] == $config["parameters"]["#encrypted"]) {
         exit(0);
     } else {
         print "Values do not match: {$config["parameters"]["plain"]} {$config["parameters"]["encrypted"]} ";
