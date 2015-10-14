@@ -16,7 +16,7 @@ try {
     if ($config["parameters"]["plain"] == $config["parameters"]["#encrypted"]) {
         exit(0);
     } else {
-        print "Values do not match: {$config["parameters"]["plain"]} {$config["parameters"]["encrypted"]} ";
+        print "Values do not match: '{$config["parameters"]["plain"]}' and '{$config["parameters"]["#encrypted"]}'";
         exit(1);
     }
 } catch (\Exception $e) {
